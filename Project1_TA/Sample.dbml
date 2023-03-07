@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AdventureWorksDW2019" Class="SampleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BANDER-SALEH-I7;Initial Catalog=AdventureWorksDW2019;Integrated Security=True" SettingsObjectName="Project1_TA.Properties.Settings" SettingsPropertyName="AdventureWorksDW2019ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DimEmployee" Member="DimEmployees">
+    <Type Name="DimEmployee">
+      <Column Name="EmployeeKey" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentEmployeeKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeNationalIDAlternateKey" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ParentEmployeeNationalIDAlternateKey" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="SalesTerritoryKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NameStyle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HireDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LoginID" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="EmergencyContactName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmergencyContactPhone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SalariedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="PayFrequency" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BaseRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VacationHours" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SickLeaveHours" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CurrentFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SalesPersonFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeePhoto" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DimEmployee_DimEmployee" Member="DimEmployees" ThisKey="EmployeeKey" OtherKey="ParentEmployeeKey" Type="DimEmployee" />
+      <Association Name="DimEmployee_DimEmployee" Member="DimEmployee1" ThisKey="ParentEmployeeKey" OtherKey="EmployeeKey" Type="DimEmployee" IsForeignKey="true" />
+      <Association Name="DimSalesTerritory_DimEmployee" Member="DimSalesTerritory" ThisKey="SalesTerritoryKey" OtherKey="SalesTerritoryKey" Type="DimSalesTerritory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DimGeography" Member="DimGeographies">
+    <Type Name="DimGeography">
+      <Column Name="GeographyKey" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="StateProvinceCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="StateProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryRegionCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="EnglishCountryRegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SpanishCountryRegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FrenchCountryRegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="SalesTerritoryKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IpAddressLocator" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="DimSalesTerritory_DimGeography" Member="DimSalesTerritory" ThisKey="SalesTerritoryKey" OtherKey="SalesTerritoryKey" Type="DimSalesTerritory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DimSalesTerritory" Member="DimSalesTerritories">
+    <Type Name="DimSalesTerritory">
+      <Column Name="SalesTerritoryKey" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalesTerritoryAlternateKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalesTerritoryRegion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesTerritoryCountry" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesTerritoryGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalesTerritoryImage" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DimSalesTerritory_DimEmployee" Member="DimEmployees" ThisKey="SalesTerritoryKey" OtherKey="SalesTerritoryKey" Type="DimEmployee" />
+      <Association Name="DimSalesTerritory_DimGeography" Member="DimGeographies" ThisKey="SalesTerritoryKey" OtherKey="SalesTerritoryKey" Type="DimGeography" />
+    </Type>
+  </Table>
+</Database>

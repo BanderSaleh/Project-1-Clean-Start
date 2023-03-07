@@ -1,0 +1,109 @@
+The Project(s) to prep create for Applied Database next quarter:
+>Fullstack App (Ideal Version) Incorporates (Javascript [Node.js or ReactJS], SQL Server, HTML, CSS) on a adventure worth 2018 database framework?
+>Fullstack App (Backup CPIII Level Version) (C#, SQL Server, HTML, CSS)
+-Html css javascript transition together good
+-C# goes good with SQL
+
+
+<TO DO>
+
+(Incomplete)
+>Push Functioning Fullstack Project to GitHub
+-basic and minimal features
+>Create a Trello Board (backup) and GitHub Boards (preffered) for this project
+>
+-
+>@4PM-6:30PM - Attend Office Hours for Applied Database Design
+https://rtcedu.zoom.us/j/83361827505?pwd=QXdUQi9yL3g5WlJRbmRNMW1nbHVrUT09
+>5-10 minute Microsoft Teams Meeting to start the day
+-general update and if I need help or not with something
+
+(Completed)
+>brush up on:
+-stored procedures
+-views
+
+
+
+
+
+Project Outline:
+
+
+
+>Landing Page: 
+
+-Employees (table: DimEmployee)
+-Customers (table: DimCustomer)
+-Sales (table(s):
+-
+-
+-
+
+
+
+>Employers Page
+-
+
+
+
+
+>Customers Page
+-
+
+
+
+
+
+>Sales Page
+-charts
+
+
+
+
+Project Process:
+
+1. Created a new SQL project (containing a view to display specific Employee data from AdventureWorksDW2019.bak database) and then I created a new C# XAML project (with a MainWindow incorporating a WPF DataGrid object (and Button?)
+
+
+
+2. Learned about "LINQ"
+
+Read this Introduction To LINQ url: https://www.c-sharpcorner.com/article/introduction-to-linq/
+
+Learned that I need the "LINQ to SQL" provider to fetch data from a SQL database. "LINQ to SQL" supports SQL: transactions, views, and stored procedures. To Update the SQL Database when the C# project gets updated, we use "LINQ to XML" provider.
+
+
+
+
+3. Installed "LINQ to SQL" and "ASP.NET Web Application" via Visual Studios Installer and clicked Modify as instructed in this link that I found searching google: how to install LINQ to SQL:
+https://learn.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2?view=vs-2022
+
+EDIT: (Step 5 technically I hit a roadblock and did this to fix):
+Link I followed when I needed to install ASP.NET Web Application: https://learn.microsoft.com/en-us/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
+
+
+
+4. Added a New Item to my C# project name in the solution explorer called Sample.dbml. Inside that new file: I had to connect to my SQL Database AdventureWorksDW2019 just like what I do on SQL. Then, I dragged the tables needed to run my SQL code that Joins multiple tables.
+
+used this tutorial link: https://www.c-sharpcorner.com/article/how-to-use-linq-to-sql-for-retrieving-data-from-sql-server-database/
+
+
+
+5. Cleanly called the 3 SQL Tables to my MainWindow.xaml.cs and then created requested ViewModel class
+link: https://www.c-sharpcorner.com/article/working-with-multiple-table-using-linq-join-in-mvc/
+
+
+
+10. Created a GitHub Repo containing 2 folders: SQL project folder & C# project folder
+
+I simply dragged the main parent folder (containing both projects) to GitHub Desktop
+
+
+
+5. 
+
+
+Bonus Step: Add Bootstrap elements
+
+

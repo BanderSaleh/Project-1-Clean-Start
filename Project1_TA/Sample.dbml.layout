@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.25" name="Sample">
+  <DataContextMoniker Name="/SampleDataContext" />
+  <nestedChildShapes>
+    <classShape Id="adc28603-a1a5-4de2-8498-fa26215a6683" absoluteBounds="1.875, 2.75, 2, 6.7707340494791648">
+      <DataClassMoniker Name="/SampleDataContext/DimEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8299f8c4-b632-4d4b-9c35-f60e55ebfb89" absoluteBounds="1.8899999999999997, 3.21, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.58423076923077 : 9.52073404947916); (2.58423076923077 : 9.77073404947916); (3.17961538461538 : 9.77073404947916); (3.17961538461538 : 9.52073404947916)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SampleDataContext/DimEmployee/DimEmployee_DimEmployee" />
+      <nodes>
+        <classShapeMoniker Id="adc28603-a1a5-4de2-8498-fa26215a6683" />
+        <classShapeMoniker Id="adc28603-a1a5-4de2-8498-fa26215a6683" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d6936747-6f3a-4b56-88ed-681fd523265d" absoluteBounds="7.375, 2.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/SampleDataContext/DimGeography" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3de658c3-c1df-4b81-a332-dcd28e26a8e6" absoluteBounds="7.39, 3.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5d5dd4f-e148-4efa-af9b-1644431e35fe" absoluteBounds="4.75, 2.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SampleDataContext/DimSalesTerritory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9605bcdd-1180-42b9-9fe6-abf2bb0db7bb" absoluteBounds="4.765, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 3.73159912109375); (3.875 : 3.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SampleDataContext/DimSalesTerritory/DimSalesTerritory_DimEmployee" />
+      <nodes>
+        <classShapeMoniker Id="a5d5dd4f-e148-4efa-af9b-1644431e35fe" />
+        <classShapeMoniker Id="adc28603-a1a5-4de2-8498-fa26215a6683" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 3.73159912109375); (7.375 : 3.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SampleDataContext/DimSalesTerritory/DimSalesTerritory_DimGeography" />
+      <nodes>
+        <classShapeMoniker Id="a5d5dd4f-e148-4efa-af9b-1644431e35fe" />
+        <classShapeMoniker Id="d6936747-6f3a-4b56-88ed-681fd523265d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
