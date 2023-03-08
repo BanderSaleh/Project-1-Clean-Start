@@ -1,0 +1,5 @@
+Last Windows Open while working on Senior Dev Project1. Might've found the next step to properly build the C# Code.
+
+https://www.c-sharpcorner.com/article/how-to-use-linq-to-sql-for-retrieving-data-from-sql-server-database/
+
+https://www.c-sharpcorner.com/article/working-with-multiple-table-using-linq-join-in-mvc/

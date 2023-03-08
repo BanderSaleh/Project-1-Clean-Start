@@ -90,10 +90,12 @@ used this tutorial link: https://www.c-sharpcorner.com/article/how-to-use-linq-t
 
 
 
-5. Cleanly called the 3 SQL Tables to my MainWindow.xaml.cs and then created requested ViewModel class
+5. Cleanly called the 3 SQL Tables to my MainWindow.xaml.cs and then created a ViewModel class following
 link: https://www.c-sharpcorner.com/article/working-with-multiple-table-using-linq-join-in-mvc/
 
+5. LINQ to SQL update code
 
+6. LINQPad needed or not?
 
 10. Created a GitHub Repo containing 2 folders: SQL project folder & C# project folder
 

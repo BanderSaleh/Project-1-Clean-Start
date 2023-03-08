@@ -35,7 +35,7 @@ namespace Project1_TA
 
 
             // MessageBox.Show("Hello World!");
-            //MessageBox.Show("Hello World!");
+            MessageBox.Show("Hello World!");
             //Filled our WPF Object named "GridView1" with data from our instance
             GridView1.ItemsSource = employee.DimEmployees;
 
